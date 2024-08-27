@@ -1,0 +1,138 @@
+:root{
+    --counter: 0;
+    --rotate: 0;
+
+    --width-line: 0; 
+    --top-line: 0;
+
+    --section-height: 0;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    display: flex;
+    background-color: rgb(182, 210, 207)
+}
+.conatiner { 
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+.container__header { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.header__input { 
+    flex: 1 1;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    box-shadow: none;
+}
+.header__add { 
+    padding: 5px 10px;
+}
+
+
+.container__main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.circle__container {
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+.main__circle {
+    transform-origin: center;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    position: relative;
+}
+
+.main__circle div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transform-origin: 50% 100%;
+    transform: rotate(calc(var(--i) * (360deg / var(--counter))));
+    background: hsl(calc(360deg / var(--i)), 75%, 75%);
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+}
+/* .main__circle div i{
+    position: absolute;
+    top: 50%;
+    width: 65%;
+    transform: translateY(-50%);
+    height: 30%;
+    background: black;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+} */
+.main__circle div span{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-size: 17px;
+}
+.section {
+    position: fixed;
+    z-index: 100;
+    top: -1%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-top: 30px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+
+
+.container__footer { 
+    width: initial;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__spin { 
+    padding: 5px 10px;
+}
+.footer__result-container { 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+@media screen and (min-width: 1280px) {
+    .conatiner { 
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .conatiner { 
+        width: 75%;
+    }
+}

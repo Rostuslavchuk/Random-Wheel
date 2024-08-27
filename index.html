@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Random Wheel</title>
+</head>
+<body>
+    
+    <div class="conatiner">
+        <header class="container__header">
+            <input type="text" placeholder="Enter text to add" class="header__input" id="header__input">
+            <button disabled type="button" class="header__add" id="header__add">Add</button>
+        </header>
+        <main class="container__main">  
+            <div class="circle__container">
+                <div id="main__circle" class="main__circle"></div>
+                <div class="section" id="section"></div>
+            </div>
+        </main>
+        <footer class="container__footer" >
+            <button type="button" class="footer__spin" id="footer__spin">Spin</button>
+            <div class="footer__result-container">
+                <span>Result: <b id="result" class="result"></b></span>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
